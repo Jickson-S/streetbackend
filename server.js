@@ -7,7 +7,7 @@ const UAParser = require('ua-parser-js');
 const fs = require('fs');
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 console.log("MONGO_URI loaded:", process.env.MONGO_URI);
